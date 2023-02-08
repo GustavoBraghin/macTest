@@ -35,17 +35,17 @@ class HomeViewController: NSViewController {
         }
     }
     
-    override func viewDidAppear() {
-        print("Appeared")
-    }
-    
-    override func viewWillDisappear() {
-        print("Disappeared")
-    }
-    
     override func loadView() {
         self.view = NSView(frame: NSRect(x: 0, y: 0, width: NSScreen.main?.frame.width ?? .zero, height: NSScreen.main?.frame.height ?? .zero))
     }
+    
+//    override func viewDidAppear() {
+//        print("Appeared")
+//    }
+    
+//    override func viewWillDisappear() {
+//        print("Disappeared")
+//    }
     
     func configureConstraints() {
         let textConstraints = [

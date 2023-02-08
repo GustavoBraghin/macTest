@@ -36,7 +36,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         window?.makeKeyAndOrderFront(nil)
         window.title = "Senhasegura"
-        window.contentViewController = HomeViewController()
+        window.contentViewController = TabViewController()
     }
     
 }
