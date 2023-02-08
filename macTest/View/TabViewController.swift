@@ -17,9 +17,9 @@ class TabViewController: NSTabViewController {
     
     private func configureTabViewController() {
         tabStyle = .segmentedControlOnTop
-        addTabViewItem(NSTabViewItem(viewController: HomeViewController()))
+        addTabViewItem(NSTabViewItem(viewController: InfoViewController()))
         tabViewItems[0].label = "First"
-        addTabViewItem(NSTabViewItem(viewController: HomeViewController()))
+        addTabViewItem(NSTabViewItem(viewController: InfoViewController()))
         tabViewItems[1].label = "Second"
     }
     

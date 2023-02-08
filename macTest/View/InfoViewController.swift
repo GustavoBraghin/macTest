@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  InfoViewController.swift
 //  macTest
 //
 //  Created by Gustavo da Silva Braghin on 07/02/23.
@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class HomeViewController: NSViewController {
+class InfoViewController: NSViewController {
     
     private let text: NSTextView = {
         let textView = NSTextView(frame: .zero)
