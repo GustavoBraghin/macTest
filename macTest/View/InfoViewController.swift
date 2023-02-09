@@ -8,25 +8,44 @@
 import Cocoa
 
 class InfoViewController: NSViewController {
+    let infoViewModel: InfoViewModel
+    
+    private let titleView: NSTextView = {
+        let title = NSTextView(frame: .zero)
+        title.alignment = .left
+        title.drawsBackground = false
+        title.isEditable = false
+        title.translatesAutoresizingMaskIntoConstraints = false
+        title.font = .systemFont(ofSize: 22, weight: .bold)
+        return title
+    }()
     
     private let text: NSTextView = {
         let textView = NSTextView(frame: .zero)
-        textView.alignment = .center
+        textView.alignment = .left
         textView.drawsBackground = false
         textView.isEditable = false
         textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.string = "Trying to make it works"
+//        textView.backgroundColor = .red
         return textView
     }()
     
+    init(infoViewModel: InfoViewModel) {
+        self.infoViewModel = infoViewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Cheguei")
         
         // Do view setup here.
-        print("Cheguei")
-        view.window?.backgroundColor = .red
+        view.addSubview(titleView)
+        titleView.string = infoViewModel.infoModel.title
         view.addSubview(text)
+        text.string = infoViewModel.infoModel.text
         configureConstraints()
+        infoViewModel.printInfo()
     }
     
     override var representedObject: Any? {
@@ -47,15 +66,26 @@ class InfoViewController: NSViewController {
 //        print("Disappeared")
 //    }
     
-    func configureConstraints() {
-        let textConstraints = [
-            text.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            text.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            text.widthAnchor.constraint(equalToConstant: 200),
-            text.heightAnchor.constraint(equalToConstant: 30)
-        ]
-        
-        NSLayoutConstraint.activate(textConstraints)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
+    private func configureConstraints() {
+        let titleConstraints = [
+            titleView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
+            titleView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            titleView.widthAnchor.constraint(equalToConstant: 100),
+            titleView.heightAnchor.constraint(equalToConstant: 40)
+        ]
+        
+        let textConstraints = [
+            text.leadingAnchor.constraint(equalTo: titleView.leadingAnchor, constant: 15),
+            text.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            text.topAnchor.constraint(equalTo: titleView.bottomAnchor, constant: 15),
+            text.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20)
+        ]
+        
+        NSLayoutConstraint.activate(titleConstraints)
+        NSLayoutConstraint.activate(textConstraints)
+    }
 }

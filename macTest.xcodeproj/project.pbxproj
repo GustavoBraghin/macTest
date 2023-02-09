@@ -13,6 +13,7 @@
 		66765BE329929BA9003E3657 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66765BE229929BA9003E3657 /* InfoViewController.swift */; };
 		667BCF9329941BA7009C9213 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667BCF9229941BA7009C9213 /* TabViewController.swift */; };
 		667BCF9629942081009C9213 /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667BCF9529942081009C9213 /* InfoModel.swift */; };
+		66C5A1AB299528F90039C10D /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5A1AA299528F90039C10D /* InfoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		66765BE229929BA9003E3657 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		667BCF9229941BA7009C9213 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		667BCF9529942081009C9213 /* InfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
+		66C5A1AA299528F90039C10D /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		66765BCF2991996C003E3657 /* macTest */ = {
 			isa = PBXGroup;
 			children = (
+				66C5A1A9299528E50039C10D /* ViewModel */,
 				667BCF942994205C009C9213 /* Model */,
 				66765BE129929B81003E3657 /* View */,
 				66765BD02991996C003E3657 /* AppDelegate.swift */,
@@ -81,6 +84,14 @@
 				667BCF9529942081009C9213 /* InfoModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		66C5A1A9299528E50039C10D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				66C5A1AA299528F90039C10D /* InfoViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +165,7 @@
 			files = (
 				66765BE0299295EE003E3657 /* main.swift in Sources */,
 				66765BD12991996C003E3657 /* AppDelegate.swift in Sources */,
+				66C5A1AB299528F90039C10D /* InfoViewModel.swift in Sources */,
 				667BCF9329941BA7009C9213 /* TabViewController.swift in Sources */,
 				66765BE329929BA9003E3657 /* InfoViewController.swift in Sources */,
 				667BCF9629942081009C9213 /* InfoModel.swift in Sources */,

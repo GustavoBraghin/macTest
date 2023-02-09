@@ -17,10 +17,16 @@ class TabViewController: NSTabViewController {
     
     private func configureTabViewController() {
         tabStyle = .segmentedControlOnTop
-        addTabViewItem(NSTabViewItem(viewController: InfoViewController()))
-        tabViewItems[0].label = "First"
-        addTabViewItem(NSTabViewItem(viewController: InfoViewController()))
-        tabViewItems[1].label = "Second"
+        
+        let homeModel = InfoModel(title: "Home", text: "Home Sweet home my friend")
+        let homeVC = InfoViewController(infoViewModel: InfoViewModel(infoModel: homeModel))
+        addTabViewItem(NSTabViewItem(viewController: homeVC))
+        tabViewItems[0].label = homeVC.infoViewModel.infoModel.title
+        
+        let secondModel = InfoModel(title: "Second", text: "Here it is the second view bro")
+        let secondVC = InfoViewController(infoViewModel: InfoViewModel(infoModel: secondModel))
+        addTabViewItem(NSTabViewItem(viewController: secondVC))
+        tabViewItems[1].label = secondVC.infoViewModel.infoModel.title
     }
     
 }
