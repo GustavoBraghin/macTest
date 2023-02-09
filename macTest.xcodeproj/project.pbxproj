@@ -58,8 +58,6 @@
 		66765BCF2991996C003E3657 /* macTest */ = {
 			isa = PBXGroup;
 			children = (
-				66C5A1A9299528E50039C10D /* ViewModel */,
-				667BCF942994205C009C9213 /* Model */,
 				66765BE129929B81003E3657 /* View */,
 				66765BD02991996C003E3657 /* AppDelegate.swift */,
 				66765BD42991996E003E3657 /* Assets.xcassets */,
@@ -72,10 +70,20 @@
 		66765BE129929B81003E3657 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				66765BE229929BA9003E3657 /* InfoViewController.swift */,
+				6679384D299555E200590D26 /* InfoView */,
 				667BCF9229941BA7009C9213 /* TabViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		6679384D299555E200590D26 /* InfoView */ = {
+			isa = PBXGroup;
+			children = (
+				66C5A1A9299528E50039C10D /* ViewModel */,
+				667BCF942994205C009C9213 /* Model */,
+				66765BE229929BA9003E3657 /* InfoViewController.swift */,
+			);
+			path = InfoView;
 			sourceTree = "<group>";
 		};
 		667BCF942994205C009C9213 /* Model */ = {

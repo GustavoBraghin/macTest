@@ -10,7 +10,7 @@ import Cocoa
 class InfoViewController: NSViewController {
     let infoViewModel: InfoViewModel
     
-    private let titleView: NSTextView = {
+    private lazy var titleView: NSTextView = {
         let title = NSTextView(frame: .zero)
         title.alignment = .left
         title.drawsBackground = false
@@ -20,7 +20,7 @@ class InfoViewController: NSViewController {
         return title
     }()
     
-    private let text: NSTextView = {
+    private lazy var text: NSTextView = {
         let textView = NSTextView(frame: .zero)
         textView.alignment = .left
         textView.drawsBackground = false
