@@ -16,7 +16,7 @@ class InfoViewController: NSViewController {
         title.drawsBackground = false
         title.isEditable = false
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.font = .systemFont(ofSize: 22, weight: .bold)
+        title.font = .systemFont(ofSize: 32, weight: .bold)
         return title
     }()
     
@@ -26,6 +26,7 @@ class InfoViewController: NSViewController {
         textView.drawsBackground = false
         textView.isEditable = false
         textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.font = .systemFont(ofSize: 22, weight: .regular)
 //        textView.backgroundColor = .red
         return textView
     }()
@@ -74,8 +75,8 @@ class InfoViewController: NSViewController {
         let titleConstraints = [
             titleView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
             titleView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            titleView.widthAnchor.constraint(equalToConstant: 100),
-            titleView.heightAnchor.constraint(equalToConstant: 40)
+            titleView.widthAnchor.constraint(equalToConstant: 200),
+            titleView.heightAnchor.constraint(equalToConstant: 60)
         ]
         
         let textConstraints = [
